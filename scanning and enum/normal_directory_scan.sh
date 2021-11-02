@@ -11,9 +11,11 @@ if [ "$1" == "" ]; then 								#checking if the input is empty
 else
 	if [[ $1 = *http* ]]
 	then
-		<Location of FFUF and wordlist>						#In my computer,	~/./ffuf/ffuf -w ~/Desktop/WAP/newpass.txt -u $url
-	else										#In my computer FFUF is in the home directory. Change it to yours when you use it.
+		~/./<Location of FFUF>/ffuf -w <wordlist> -u $url
+	else								
 		url="http://${url}"							#This is to add the http part before the url or ip address. If you want to do it for https, change it to that. 
-		<Location of FFUF and wordlist>						#In my computer,	~/./ffuf/ffuf -w ~/Desktop/WAP/newpass.txt -u $url
+		~/./<Location of FFUF>/ffuf -w <wordlist> -u $url			
 	fi
 fi
+
+#~/./ffuf/ffuf -w /usr/share/dirb/wordlists/common.txt -u $url
